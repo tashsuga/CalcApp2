@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         if (v?.id == R.id.button) {
             // buttonがクリックされたとき
 
-             if (editText1.text.toString().equals("") != true || editText1.text.toString().equals("")!= true) {
+             if (editText1.text.toString().equals("") != true || editText2.text.toString().equals("")!= true) {
             // if (editText1.text.toString() != null || editText2.text.toString() != null) {
                 // 取得したテキストを TextView に張り付ける
                 // s1 =
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
                 startActivity(intent)
             }
         } else if (v?.id == R.id.button2) {
-            if (editText1.text.toString().equals("") != true || editText1.text.toString().equals("")!= true) {
+            if (editText1.text.toString().equals("") != true || editText2.text.toString().equals("")!= true) {
             //if (editText1.text.toString() != null || editText2.text.toString() != null) {
                 // 取得したテキストを TextView に張り付ける
                 // s1 =
@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
 
         }
         else if (v?.id == R.id.button5) {
-            if (editText1.text.toString().equals("") != true || editText1.text.toString().equals("")!= true) {
+            if (editText1.text.toString().equals("") != true || editText2.text.toString().equals("")!= true) {
                 // if (editText1.text.toString() != null || editText2.text.toString() != null) {
                 // 取得したテキストを TextView に張り付ける
                 // s1 =
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
 
         }
         else if (v?.id == R.id.button6) {
-            if (editText1.text.toString().equals("") != true || editText1.text.toString().equals("")!= true) {
+            if (editText1.text.toString().equals("") != true || editText2.text.toString().equals("")!= true) {
                 // if (editText1.text.toString() != null || editText2.text.toString() != null) {
                 // 取得したテキストを TextView に張り付ける
                 // s1 =
@@ -120,5 +120,17 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
 
 
         }
+        /*
+        else {
+            this.setOnClickListener {
+                v? ->
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_INDEFINITE)
+                    .setAction("Action") {
+                        Log.d("UI_PARTS", "Snackbarをタップした")
+                    }.show()
+            }
+        }
+
+        */
     }
 }
