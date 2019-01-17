@@ -14,9 +14,9 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         setContentView(R.layout.activity_main)
 
         button.setOnClickListener(this)
-
-        //button2.setOnClickListener(this)
-
+        button2.setOnClickListener(this)
+        button5.setOnClickListener(this)
+        button6.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         if (v?.id == R.id.button) {
             // buttonがクリックされたとき
 
-            // if (editText1.text.toString().equals("") || editText1.text.toString().equals(""))
-            if (editText1.text.toString() != null || editText2.text.toString() != null) {
+             if (editText1.text.toString().equals("") != true || editText1.text.toString().equals("")!= true) {
+            // if (editText1.text.toString() != null || editText2.text.toString() != null) {
                 // 取得したテキストを TextView に張り付ける
                 // s1 =
                 val t1: String = editText1.text.toString()
@@ -36,28 +36,82 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
                 val t11: Double = t1.toDouble()
                 val t22: Double = t2.toDouble()
 
+                 val all: Double = t11 + t22
 
-                intent.putExtra("VALUE1", t11)
-                intent.putExtra("VALUE2", t22)
+
+                intent.putExtra("VALUE_All", all)
+                //val all: Double = value1 + value2
+
+                // val all: Double = value1 + value2
+
+                // intent.putExtra("VALUE3", t11)
+                 // intent.putExtra("VALUE4", t22)
+
+                startActivity(intent)
+            }
+        } else if (v?.id == R.id.button2) {
+            if (editText1.text.toString().equals("") != true || editText1.text.toString().equals("")!= true) {
+            //if (editText1.text.toString() != null || editText2.text.toString() != null) {
+                // 取得したテキストを TextView に張り付ける
+                // s1 =
+                val t1: String = editText1.text.toString()
+                val t2: String = editText2.text.toString()
+
+
+                val t11: Double = t1.toDouble()
+                val t22: Double = t2.toDouble()
+
+                val all: Double = t22 - t11
+
+
+                intent.putExtra("VALUE_All", all)
 
 
 
                 startActivity(intent)
             }
-        } else if (v?.id == R.id.button2) {
-            // if (editText1.text.toString().equals("") || editText1.text.toString().equals(""))
-            if (editText1.text.toString() != null || editText2.text.toString() != null) {
+
+        }
+        else if (v?.id == R.id.button5) {
+            if (editText1.text.toString().equals("") != true || editText1.text.toString().equals("")!= true) {
+                // if (editText1.text.toString() != null || editText2.text.toString() != null) {
                 // 取得したテキストを TextView に張り付ける
                 // s1 =
                 val t1: String = editText1.text.toString()
                 val t2: String = editText2.text.toString()
 
+
                 val t11: Double = t1.toDouble()
                 val t22: Double = t2.toDouble()
 
+                val all: Double = t22 * t11
 
-                intent.putExtra("VALUE1", t11)
-                intent.putExtra("VALUE2", t22)
+
+                intent.putExtra("VALUE_All", all)
+
+
+
+                startActivity(intent)
+            }
+
+
+        }
+        else if (v?.id == R.id.button6) {
+            if (editText1.text.toString().equals("") != true || editText1.text.toString().equals("")!= true) {
+                // if (editText1.text.toString() != null || editText2.text.toString() != null) {
+                // 取得したテキストを TextView に張り付ける
+                // s1 =
+                val t1: String = editText1.text.toString()
+                val t2: String = editText2.text.toString()
+
+
+                val t11: Double = t1.toDouble()
+                val t22: Double = t2.toDouble()
+
+                val all: Double = t22 / t11
+
+
+                intent.putExtra("VALUE_All", all)
 
 
 

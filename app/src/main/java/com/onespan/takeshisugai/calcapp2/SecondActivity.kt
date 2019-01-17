@@ -22,10 +22,14 @@ class SecondActivity : AppCompatActivity() {
         val value2 = intent.getDoubleExtra("VALUE2", 0.0)
 
 
+        val value_all = intent.getDoubleExtra("VALUE_All", 0.0)
+
        val all: Double = value1 + value2
 
-        textView.text = all.toString()
 
+        //textView.text = all.toString()
+
+        textView.text = value_all.toString()
 
         //t2: Double
         //textView.text = "${value1 + value2}"
