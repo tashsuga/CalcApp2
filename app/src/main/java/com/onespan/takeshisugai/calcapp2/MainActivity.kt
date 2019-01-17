@@ -14,39 +14,57 @@ class MainActivity : AppCompatActivity() , View.OnClickListener{
         setContentView(R.layout.activity_main)
 
         button.setOnClickListener(this)
+
+        //button2.setOnClickListener(this)
+
     }
 
     override fun onClick(v: View?) {
         val intent = Intent(this, SecondActivity::class.java)
 
-        /*
-        intent.run {
-            putExtra("VALUE1",  $textInputLayout)
-            putExtra("VALUE2", $textInputLayout2)
+
+        if (v?.id == R.id.button) {
+            // buttonがクリックされたとき
+
+            // if (editText1.text.toString().equals("") || editText1.text.toString().equals(""))
+            if (editText1.text.toString() != null || editText2.text.toString() != null) {
+                // 取得したテキストを TextView に張り付ける
+                // s1 =
+                val t1: String = editText1.text.toString()
+                val t2: String = editText2.text.toString()
+
+                val t11: Double = t1.toDouble()
+                val t22: Double = t2.toDouble()
+
+
+                intent.putExtra("VALUE1", t11)
+                intent.putExtra("VALUE2", t22)
+
+
+
+                startActivity(intent)
+            }
+        } else if (v?.id == R.id.button2) {
+            // if (editText1.text.toString().equals("") || editText1.text.toString().equals(""))
+            if (editText1.text.toString() != null || editText2.text.toString() != null) {
+                // 取得したテキストを TextView に張り付ける
+                // s1 =
+                val t1: String = editText1.text.toString()
+                val t2: String = editText2.text.toString()
+
+                val t11: Double = t1.toDouble()
+                val t22: Double = t2.toDouble()
+
+
+                intent.putExtra("VALUE1", t11)
+                intent.putExtra("VALUE2", t22)
+
+
+
+                startActivity(intent)
+            }
+
+
         }
-        */
-         val s1 : String
-
-        // textInputLayout.text.toString()
-        // エディットテキストのテキストを取得
-      // if(textInputLayout.toString() != null) {
-        //    if(textInputLayout.getEditableText().toString() != null)
-            // 取得したテキストを TextView に張り付ける
-           // s1 =
-           // val t1 : String = textInputLayout.toString()
-            //val i1 = Long.(t1)
-           // var textInputLayout_no1 = textInputLayout
-           //s1 = "$textInputLayout1"
-           s1 = TextInputLayout1.toString()
-
-           Log.d("UI_PARTS", "入力 $s1")
-
-           intent.putExtra("VALUE1", 3)
-            intent.putExtra("VALUE2", 2)
-       // }
-
-        //startActivity(intent)
-        startActivity(intent)
     }
-
 }
